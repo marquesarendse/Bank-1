@@ -7,7 +7,7 @@ class BankingApplication:
     def __init__(self, master):
         self.master = master
         self.master.title("Banking Application")
-        self.master.geometry("500x500")
+        self.master.geometry("500x450")
 
         self.current_user = None
 
@@ -15,7 +15,7 @@ class BankingApplication:
         self.balance = 0.0
 
         # Initialize login/register frame
-        self.login_register_frame = tk.Frame(self.master)
+        self.login_register_frame = tk.Frame(self.master, bg='cyan4')
         self.login_register_frame.pack()
 
         self.username_label = tk.Label(self.login_register_frame, text="Username:")
@@ -257,5 +257,6 @@ class BankingApplication:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    root.configure(bg='cyan4')
     app = BankingApplication(root)
     root.mainloop()
